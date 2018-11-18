@@ -1,0 +1,20 @@
+了解Mavlink的使用方法
+
+拿到一块飞控并初始化：
+	中文教程：http://tieba.baidu.com/p/2974250475 			（pixhawk与apm稍有不同，教程中不进行遥控校准、解锁等操作，需安装Mission Planner 地面站）
+	英文官网：http://ardupilot.org/copter/docs/introduction.html 	（收藏，里面除了教程还有很多材料）
+	
+编写串口程序，能够接受Mavlink消息：
+	稍微看看Mavlink是什么， 	https://www.jianshu.com/p/23fddff60369
+	熟悉完整的Mavlink消息起始位、组成、长度、可变部分与固定部分
+	官网给出了所有消息的定义和用途  https://mavlink.io/en/messages/common.html （收藏，以后需要的时候可以查）
+	想办法运行收发消息程序示例 （Serial.h 和 Serial.cpp 是串口程序库，已经封装完成，不用理解）
+	熟悉程序中用到的Mavlink消息的打包函数和解析函数的各参数意义
+	在此程序基础上增加接受姿态消息的功能，能够实时观察到姿态角随飞控板运动而变化
+	
+挑战任务：
+	小明同学认真分析了飞控发来的Mavlink消息和这个程序里发出的标准的Mavlink消息不太一样。
+	他发现对于同样类型的消息，例如heartbeat,飞控发来的都特别短,好像少了点什么东西，但依然能够传递数据。
+	于是他也学着这种形式，对打包好的消息进行处理，之后向飞控发送，令人惊奇的是，飞控也能正确的执行。
+	你能复现小明同学的方法吗，如何解释这样设计的意图？
+	
