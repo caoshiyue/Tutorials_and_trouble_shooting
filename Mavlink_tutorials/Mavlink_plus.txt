@@ -1,0 +1,60 @@
+关于消息请求：
+	熟悉以下消息以及定义：
+	消息流id https://mavlink.io/en/messages/common.html 里的MAV_DATA_STREAM 
+	消息流请求消息 REQUEST_DATA_STREAM ( #66 )
+
+下载新飞控固件：
+	在Mission planner 中，点击 初始设置、安装固件、加载自定义固件，
+	选择文件中的Arducopter.px4，按照提示操作，等待下载完成
+
+依赖环境配置：
+	下载git(不是github)： https://git-scm.com/downloads
+	下载python（3.0+都行），中文教程： https://www.liaoxuefeng.com/wiki/0014316089557264a6b348958f449949df42a6d3a2e542c000/0014316090478912dab2a3a9e8f4ed49d28854b292f85bb000
+	安装完成后在cmd输入以下内容：
+
+	# 查看python版本
+	python --version
+	# 查看pip信息
+	pip --version	
+
+	显示版本为安装成功，pip可能存在未安装的情况，在网上找到下载
+
+生成Mavlink消息：
+	选择一个文件夹，右键git bash here，输入：
+
+	git clone https://github.com/mavlink/mavlink
+
+	下载速度慢的网上搜解决方法
+	完成后进入该文件夹
+	打开cmd，输入：
+
+	python 
+
+	注意上一行末尾有一个空格，然后把Mavlink下面的mavgenerate.py拖到cmd里面，回车
+	如果遇见错误 no module named "xxx"， 输入：
+
+	pip install xxx
+
+	正确运行会出现一个名称为Mavlink generator 的界面
+	XML选择 message_definitions\v1.0\common.xml
+	OUT是生成的Mavlink文件位置，自己选
+	language选C
+	protocol选1.0
+	然后点generate，完成
+编写新的Mavlink消息：
+	将 message_definitions\v1.0\common.xml 备份到其他地方（时刻留意版本控制，以防开发版本覆盖稳定版本）
+	编辑 message_definitions\v1.0\common.xml
+	新消息要求：
+
+	消息id 96
+	消息名称 MISSION_STATUS
+	uint8_t		mission_id 
+	uint8_t		status
+	uint8_t[3]	status_uint
+	float[3] 	status_float
+	
+	按照上述步骤生成消息
+	修改程序，接收新生成的消息	
+
+
+
