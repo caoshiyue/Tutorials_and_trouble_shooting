@@ -1,59 +1,59 @@
-ÏÂÔØĞÂ·É¿Ø¹Ì¼ş£º
-	ÔÚMission planner ÖĞ£¬µã»÷ ³õÊ¼ÉèÖÃ¡¢°²×°¹Ì¼ş¡¢¼ÓÔØ×Ô¶¨Òå¹Ì¼ş£¬
-	Ñ¡ÔñÎÄ¼şÖĞµÄArducopter.px4£¬°´ÕÕÌáÊ¾²Ù×÷£¬µÈ´ıÏÂÔØÍê³É
+ä¸‹è½½æ–°é£æ§å›ºä»¶ï¼š
+	åœ¨Mission planner ä¸­ï¼Œç‚¹å‡» åˆå§‹è®¾ç½®ã€å®‰è£…å›ºä»¶ã€åŠ è½½è‡ªå®šä¹‰å›ºä»¶ï¼Œ
+	é€‰æ‹©æ–‡ä»¶ä¸­çš„Arducopter.px4ï¼ŒæŒ‰ç…§æç¤ºæ“ä½œï¼Œç­‰å¾…ä¸‹è½½å®Œæˆ
 
-ÒÀÀµ»·¾³ÅäÖÃ£º
-	ÏÂÔØgit(²»ÊÇgithub)£º https://git-scm.com/downloads
-	ÏÂÔØpython£¨3.0+¶¼ĞĞ£©£¬ÖĞÎÄ½Ì³Ì£º https://www.liaoxuefeng.com/wiki/0014316089557264a6b348958f449949df42a6d3a2e542c000/0014316090478912dab2a3a9e8f4ed49d28854b292f85bb000
-	°²×°Íê³ÉºóÔÚcmdÊäÈëÒÔÏÂÄÚÈİ£º
+ä¾èµ–ç¯å¢ƒé…ç½®ï¼š
+	ä¸‹è½½git(ä¸æ˜¯github)ï¼š https://git-scm.com/downloads
+	ä¸‹è½½pythonï¼ˆ3.0+éƒ½è¡Œï¼‰ï¼Œä¸­æ–‡æ•™ç¨‹ï¼š https://www.liaoxuefeng.com/wiki/0014316089557264a6b348958f449949df42a6d3a2e542c000/0014316090478912dab2a3a9e8f4ed49d28854b292f85bb000
+	å®‰è£…å®Œæˆååœ¨cmdè¾“å…¥ä»¥ä¸‹å†…å®¹ï¼š
 
-	# ²é¿´python°æ±¾
+	# æŸ¥çœ‹pythonç‰ˆæœ¬
 	python --version
-	# ²é¿´pipĞÅÏ¢
+	# æŸ¥çœ‹pipä¿¡æ¯
 	pip --version	
 
-	ÏÔÊ¾°æ±¾Îª°²×°³É¹¦£¬pip¿ÉÄÜ´æÔÚÎ´°²×°µÄÇé¿ö£¬ÔÚÍøÉÏÕÒµ½ÏÂÔØ
+	æ˜¾ç¤ºç‰ˆæœ¬ä¸ºå®‰è£…æˆåŠŸï¼Œpipå¯èƒ½å­˜åœ¨æœªå®‰è£…çš„æƒ…å†µï¼Œåœ¨ç½‘ä¸Šæ‰¾åˆ°ä¸‹è½½
 
-Éú³ÉMavlinkÏûÏ¢£º
-	Ñ¡ÔñÒ»¸öÎÄ¼ş¼Ğ£¬ÓÒ¼ügit bash here£¬ÊäÈë£º
+ç”ŸæˆMavlinkæ¶ˆæ¯ï¼š
+	é€‰æ‹©ä¸€ä¸ªæ–‡ä»¶å¤¹ï¼Œå³é”®git bash hereï¼Œè¾“å…¥ï¼š
 
 	git clone https://github.com/mavlink/mavlink
 
-	ÏÂÔØËÙ¶ÈÂıµÄÍøÉÏËÑ½â¾ö·½·¨
-	Íê³Éºó½øÈëmavlinkÎÄ¼ş¼Ğ£¬ÓÒ¼ügit bash here£¬ÊäÈë£º
+	ä¸‹è½½é€Ÿåº¦æ…¢çš„ç½‘ä¸Šæœè§£å†³æ–¹æ³•
+	å®Œæˆåè¿›å…¥mavlinkæ–‡ä»¶å¤¹ï¼Œå³é”®git bash hereï¼Œè¾“å…¥ï¼š
 	
 	git submodule update --init
 
-	Íê³Éºó´ò¿ªcmd£¬ÊäÈë£º
+	å®Œæˆåæ‰“å¼€cmdï¼Œè¾“å…¥ï¼š
 
 	python 
 
-	×¢ÒâÉÏÒ»ĞĞÄ©Î²ÓĞÒ»¸ö¿Õ¸ñ£¬È»ºó°ÑMavlinkÏÂÃæµÄmavgenerate.pyÍÏµ½cmdÀïÃæ£¬»Ø³µ
-	Èç¹ûÓö¼û´íÎó no module named "xxx"£¬ ÊäÈë£º
+	è¾“å…¥pythonååœ¨è¾“ä¸€ä¸ªç©ºæ ¼ï¼Œç„¶åæŠŠMavlinkä¸‹é¢çš„mavgenerate.pyæ‹–åˆ°cmdé‡Œé¢ï¼Œå›è½¦
+	å¦‚æœé‡è§é”™è¯¯ no module named "xxx"ï¼Œ è¾“å…¥ï¼š
 
 	pip install xxx
 
-	ÕıÈ·ÔËĞĞ»á³öÏÖÒ»¸öÃû³ÆÎªMavlink generator µÄ½çÃæ
-	XMLÑ¡Ôñ message_definitions\v1.0\common.xml
-	OUTÊÇÉú³ÉµÄMavlinkÎÄ¼şÎ»ÖÃ£¬×Ô¼ºÑ¡
-	languageÑ¡C
-	protocolÑ¡1.0
-	È»ºóµãgenerate£¬Íê³É
+	æ­£ç¡®è¿è¡Œä¼šå‡ºç°ä¸€ä¸ªåç§°ä¸ºMavlink generator çš„ç•Œé¢
+	XMLé€‰æ‹© message_definitions\v1.0\common.xml
+	OUTæ˜¯ç”Ÿæˆçš„Mavlinkæ–‡ä»¶ä½ç½®ï¼Œè‡ªå·±é€‰
+	languageé€‰C
+	protocolé€‰1.0
+	ç„¶åç‚¹generateï¼Œå®Œæˆ
 
-±àĞ´ĞÂµÄMavlinkÏûÏ¢£º
-	½« message_definitions\v1.0\common.xml ±¸·İµ½ÆäËûµØ·½£¨Ê±¿ÌÁôÒâ°æ±¾¿ØÖÆ£¬ÒÔ·À¿ª·¢°æ±¾¸²¸ÇÎÈ¶¨°æ±¾£©
-	±à¼­ message_definitions\v1.0\common.xml
-	ĞÂÏûÏ¢ÒªÇó£º
+ç¼–å†™æ–°çš„Mavlinkæ¶ˆæ¯ï¼š
+	å°† message_definitions\v1.0\common.xml å¤‡ä»½åˆ°å…¶ä»–åœ°æ–¹ï¼ˆæ—¶åˆ»ç•™æ„ç‰ˆæœ¬æ§åˆ¶ï¼Œä»¥é˜²å¼€å‘ç‰ˆæœ¬è¦†ç›–ç¨³å®šç‰ˆæœ¬ï¼‰
+	ç¼–è¾‘ message_definitions\v1.0\common.xml
+	æ–°æ¶ˆæ¯è¦æ±‚ï¼š
 
-	ÏûÏ¢id 96
-	ÏûÏ¢Ãû³Æ MISSION_STATUS
+	æ¶ˆæ¯id 96
+	æ¶ˆæ¯åç§° MISSION_STATUS
 	uint8_t		mission_id 
 	uint8_t		status
 	uint8_t[3]	status_uint
 	float[3] 	status_float
 	
-	°´ÕÕÉÏÊö²½ÖèÉú³ÉÏûÏ¢
-	ĞÂÏûÏ¢²âÊÔÏµÍ³Ôİ²»¿ÉÓÃ£¬²»½øĞĞÁ¬½Ó·É¿ØÑéÖ¤
+	æŒ‰ç…§ä¸Šè¿°æ­¥éª¤ç”Ÿæˆæ¶ˆæ¯
+	æ–°æ¶ˆæ¯æµ‹è¯•ç³»ç»Ÿæš‚ä¸å¯ç”¨ï¼Œä¸è¿›è¡Œè¿æ¥é£æ§éªŒè¯
 
 
 
