@@ -1,0 +1,19 @@
+xbee的英文说明书：
+链接：https://pan.baidu.com/s/1gLUfmwg7aCx8STcan5wIPw 密码：u0mi
+所有技术都在这里
+
+基本操作：
+下载XCTU
+Xbee连接XCTU
+固件（Function）选择
+配置参数：
+pan id 410
+API enable
+
+用XCTU的console测试一对一收发
+自己编写程序，实现一对一收发
+
+
+
+
+

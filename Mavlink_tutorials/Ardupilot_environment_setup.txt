@@ -1,0 +1,20 @@
+目前编译支持两种方法：make和waf，两者均需要在 Linux/MacOSX 操作系统下运行，因此debug过程不易。
+waf是一种简单的方法，环境搭建过程中的问题较少，编译速度快，但现在仍在建设，有一些问题，不能生成固件（你要给别人，必须给代码）
+https://github.com/ArduPilot/ardupilot/blob/master/BUILD.md
+make是目前的主流方法，环境搭建复杂，编译速度慢（有的电脑快），但可以生成固件（你给别人二进制文件，而不用暴露代码）
+官网教程（只按照他做不出来）： http://ardupilot.org/dev/docs/building-setup-linux.html#building-setup-linux
+中文教程： https://blog.csdn.net/span76/article/details/49782015
+	   https://www.aliyun.com/jiaocheng/161718.html
+	   https://www.cnblogs.com/nightnine/p/5650976.html
+基本流程：
+下载git
+git clone 代码网站
+git submodule init
+git submodule update
+安装toolchain (gcc-arm 后面编译的时候可能出版本问题，综合各个网站寻找方案)
+回到Ardupilot/arducopter
+. ~/.profile （此时该文件夹里会多出 .elf 等文件，以后出现问题请排查此情况）
+make px4-v2
+
+成功后会显示 ArduCopter Firmware is in ArduCopter-v2.px4 字样
+一般第一次不会成功，有问题请问友好的搜索框

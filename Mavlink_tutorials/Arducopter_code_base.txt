@@ -1,0 +1,16 @@
+官方教程： http://ardupilot.org/dev/docs/learning-the-ardupilot-codebase.html
+看以下内容：
+Introduction
+Library Description
+Library Example Sketches
+Threading
+UARTs and the Console
+RC Input and Output
+Copter - Vehicle Code introduction
+Copter - Attitude Control
+Copter - Adding Parameters
+Copter - Adding a new flight mode (ver 3.5 and lower)
+Copter - Scheduling your new code to run intermittently
+Adding a new MAVLink message
+
+大概了解，不要细看，主要看运行结构
