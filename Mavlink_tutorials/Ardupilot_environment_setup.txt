@@ -8,7 +8,7 @@ make是目前的主流方法，环境搭建复杂，编译速度慢（有的电脑快），但可以生成固件（你
 	   https://www.cnblogs.com/nightnine/p/5650976.html
 基本流程：
 下载git
-git clone 代码网站
+clone指定版本： git clone -b Copter-3.5 https://github.com/ArduPilot/ardupilot.git
 git submodule init
 git submodule update
 安装toolchain (gcc-arm 后面编译的时候可能出版本问题，综合各个网站寻找方案)
